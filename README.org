@@ -27,3 +27,10 @@ cd angular
 npm install
 npm start
 #+end_src
+*** React
+
+#+begin_src sh
+cd react
+npm install
+npm run dev
+#+end_src
