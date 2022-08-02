@@ -16,7 +16,7 @@ This repository if for testing different Front-end frameworks using coding chall
 *** [X] React
 *** [X] Vue
 *** [X] Svelte
-*** [ ] SolidJS
+*** [X] SolidJS
 *** [ ] AlpineJS
 
 ** Dev
@@ -28,7 +28,7 @@ cd angular
 npm install
 npm start
 #+end_src
-*** React / Vue / Svelte
+*** React/Vue/Svelte/SolidJS
 
 #+begin_src sh
 cd react # or vue
