@@ -18,6 +18,7 @@ This repository if for testing different Front-end frameworks using coding chall
 *** [X] Svelte
 *** [X] SolidJS
 *** [X] Lit
+*** [X] ClojureScript + Reagent
 *** [ ] AlpineJS
 
 ** Dev
@@ -35,4 +36,12 @@ npm start
 cd react # or vue
 npm install
 npm run dev
+#+end_src
+
+*** ClojureScript (Reagent)
+
+#+begin_src sh
+cd cljs-reagent
+npm install
+npx shadow-cljs watch app
 #+end_src
