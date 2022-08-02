@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="/src/like-dislike.ts"></script>
+    <script type="module" src="/src/ratings.ts"></script>
+    <script type="module" src="/src/autocomplete-input.ts"></script>
+  </head>
+  <body>
+    <h1>Like/Dislike</h1>
+    <like-dislike></like-dislike>
+    <h1>Ratings</h1>
+    <h2>Rating</h2>
+    <app-rating rate="3"></app-rating>
+    <h2>Average Rating</h2>
+    <average-rating></average-rating>
+    <h2>Ratings List</h2>
+    <ratings-list></ratings-list>
+
+    <script>
+      const ratings = [
+        {
+          name: "test",
+          content: "test",
+          rate: 1,
+        },
+
+        {
+          name: "test2",
+          content: "test",
+          rate: 2,
+        },
+
+        {
+          name: "test3",
+          content: "test",
+          rate: 4,
+        },
+        {
+          name: "test4",
+          content: "test",
+          rate: 4,
+        },
+      ];
+      let averageRating = document.getElementsByTagName("average-rating")[0];
+      let ratingsList = document.getElementsByTagName("ratings-list")[0];
+      averageRating.ratings = ratings;
+      ratingsList.ratings = ratings;
+    </script>
+    <h1>Autocomplete Input</h1>
+    <autocomplete-input></autocomplete-input>
+  </body>
+</html>
