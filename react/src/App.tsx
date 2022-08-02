@@ -6,7 +6,6 @@ import { AverageRating, Rating, RatingsList } from "./components/ratings";
 import AutoCompleteInput from "./components/autocomplete-input";
 
 function App() {
-  const [count, setCount] = useState(0);
   const ratings = [
     {
       name: "test",

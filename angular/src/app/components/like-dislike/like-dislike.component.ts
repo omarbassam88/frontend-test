@@ -50,25 +50,22 @@ export class LikeDislikeComponent implements OnInit {
   ngOnInit(): void {}
 
   onLikeBtnClicked() {
-    if (!this.liked) {
-      this.countLikes += 1;
-    } else {
-      this.countLikes -= 1;
-    }
+    this.countLikes += this.liked ? -1 : 1;
 
-    if (this.disliked) this.disliked = false;
+    if (this.disliked) {
+      this.countDislikes -= 1;
+      this.disliked = false;
+    }
     this.liked = !this.liked;
   }
 
   onDislikeBtnClicked() {
-    if (!this.disliked) {
-      this.countDislikes += 1;
-    } else {
-      this.countDislikes -= 1;
+    this.countDislikes += this.disliked ? -1 : 1;
+
+    if (this.liked) {
+      this.countLikes -= 1;
+      this.liked = false;
     }
-
-    if (this.liked) this.liked = false;
     this.disliked = !this.disliked;
-
   }
 }
